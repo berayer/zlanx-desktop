@@ -1,0 +1,27 @@
+packages:
+  - apps/*
+  - packages/*
+  - tools/*
+
+catalogMode: prefer
+
+catalog:
+  '@tailwindcss/vite': ^4.3.3
+  "@types/node": ^24
+  '@types/react': ^19.2.18
+  '@types/react-dom': ^19.2.7
+  '@vitejs/plugin-react': ^6.1.1
+  electron: ^44.3.0
+  react: ^19.2.8
+  react-dom: ^19.2.8
+  tailwindcss: ^4.3.3
+  typescript: ^7.0.2
+  vite: npm:@voidzero-dev/vite-plus-core@0.3.1
+  vite-plus: 0.3.1
+overrides:
+  vite@*: "catalog:"
+peerDependencyRules:
+  allowAny:
+    - vite
+  allowedVersions:
+    vite: "*"
