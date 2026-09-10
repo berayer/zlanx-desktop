@@ -2,6 +2,7 @@ import { defineConfig, loadEnv, lazyPlugins } from "vite-plus";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { resolve } from "node:path";
+import { tanstackRouter } from "@tanstack/router-plugin/vite";
 
 /**
  * website dev server 的地址与 electron 主进程共用工作区根目录的 .env，
@@ -34,6 +35,13 @@ export default defineConfig(({ command, mode }) => {
     lint: {
       plugins: ["react", "typescript", "oxc"],
     },
-    plugins: lazyPlugins(() => [react(), tailwindcss()]),
+    plugins: lazyPlugins(() => [
+      tanstackRouter({
+        target: "react",
+        autoCodeSplitting: true,
+      }),
+      react(),
+      tailwindcss(),
+    ]),
   };
 });

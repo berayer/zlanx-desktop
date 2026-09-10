@@ -7,6 +7,9 @@ catalogMode: prefer
 
 catalog:
   '@tailwindcss/vite': ^4.3.3
+  '@tanstack/react-router': ^1.170.33
+  '@tanstack/react-router-devtools': ^1.167.1
+  '@tanstack/router-plugin': ^1.168.36
   "@types/node": ^24
   '@types/react': ^19.2.18
   '@types/react-dom': ^19.2.7
