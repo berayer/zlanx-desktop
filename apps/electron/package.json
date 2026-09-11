@@ -9,9 +9,13 @@
     "build": "tsc && vp build"
   },
   "dependencies": {
-    "electron": "catalog:"
+    "cheerio": "catalog:",
+    "electron": "catalog:",
+    "es-toolkit": "catalog:",
+    "he": "catalog:"
   },
   "devDependencies": {
+    "@types/he": "catalog:",
     "typescript": "~6.0.2",
     "vite": "catalog:",
     "vite-plus": "catalog:"

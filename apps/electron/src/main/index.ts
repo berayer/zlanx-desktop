@@ -2,6 +2,8 @@ import { app, shell, BrowserWindow, ipcMain, session } from "electron";
 import { existsSync } from "fs";
 import { join } from "path";
 import { is, optimizer, platform } from "@main/util";
+// cSpell:words fcdm
+import * as fcdm from "@main/fcdm";
 
 // 开发环境下与 website 共用工作区根目录的 .env，
 // 渲染进程地址由其中的 ELECTRON_RENDERER_URL 提供。
@@ -94,6 +96,20 @@ void app.whenReady().then(() => {
 
   // IPC test
   ipcMain.on("ping", () => console.log("pong"));
+  ipcMain.handle("api:search", (_, keyword: string) => {
+    console.log("server search", keyword);
+    return fcdm.search(keyword);
+  });
+
+  ipcMain.handle("api:detail", (_, url: string) => {
+    console.log("server detail", url);
+    return fcdm.getPlayList(url);
+  });
+
+  ipcMain.handle("api:play", (_, url: string) => {
+    console.log("server play", url);
+    return fcdm.getRealPlayUrl(url);
+  });
 
   createWindow();
 

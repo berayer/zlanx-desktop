@@ -12,7 +12,8 @@
     "@tanstack/react-router": "catalog:",
     "@tanstack/react-router-devtools": "catalog:",
     "react": "catalog:",
-    "react-dom": "catalog:"
+    "react-dom": "catalog:",
+    "react-player": "catalog:"
   },
   "devDependencies": {
     "@tailwindcss/vite": "catalog:",

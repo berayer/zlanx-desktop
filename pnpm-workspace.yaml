@@ -10,13 +10,18 @@ catalog:
   '@tanstack/react-router': ^1.170.33
   '@tanstack/react-router-devtools': ^1.167.1
   '@tanstack/router-plugin': ^1.168.36
+  '@types/he': ^1.2.3
   "@types/node": ^24
   '@types/react': ^19.2.18
   '@types/react-dom': ^19.2.7
   '@vitejs/plugin-react': ^6.1.1
+  cheerio: ^1.2.0
   electron: ^44.3.0
+  es-toolkit: ^1.52.0
+  he: ^1.2.0
   react: ^19.2.8
   react-dom: ^19.2.8
+  react-player: ^3.4.0
   tailwindcss: ^4.3.3
   typescript: ^7.0.2
   vite: npm:@voidzero-dev/vite-plus-core@0.3.1

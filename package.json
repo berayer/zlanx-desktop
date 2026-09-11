@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vp run -r --parallel dev",
-    "build": "vp run -r --parallel build"
+    "build": "vp run -r --parallel build",
+    "dev:web": "vp run website#dev"
   },
   "devDependencies": {
     "vite": "catalog:",
